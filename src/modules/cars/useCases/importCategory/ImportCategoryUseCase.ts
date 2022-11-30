@@ -30,6 +30,7 @@ export class ImportCategoryUseCase {
           console.log("inside");
         })
         .on("end", () => {
+          fs.promises.unlink(file.path);
           resolve(categories);
         })
         .on("error", (err) => {
