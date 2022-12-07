@@ -8,6 +8,7 @@ export const AppDataSource = new DataSource({
   password: "docker",
   database: "rentx",
   migrations: ["./src/database/migrations/*.ts"],
+  entities: ["./src/modules/**/entities/*.ts"],
 });
 
 AppDataSource.initialize()
