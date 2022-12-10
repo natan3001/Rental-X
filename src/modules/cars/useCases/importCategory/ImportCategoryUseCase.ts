@@ -27,7 +27,6 @@ export class ImportCategoryUseCase {
             name,
             description,
           });
-          console.log("inside");
         })
         .on("end", () => {
           fs.promises.unlink(file.path);
